@@ -21,7 +21,7 @@ const uploadFileToCOS = (cos, path) => {
         cos.cli.putObject({
             Bucket: cos.bucket,
             Region: cos.region,
-            Key: Path.join(cos.remotePath, path),
+            Key: Path.join(cos.remotePath, path).split(Path.sep).join('/'),
             StorageClass: 'STANDARD',
             Body: fs.createReadStream(Path.join(cos.localPath, path)),
         }, function(err, data) {
@@ -39,7 +39,7 @@ const deleteFileFromCOS = (cos, path) => {
         cos.cli.deleteObject({
             Bucket: cos.bucket,
             Region: cos.region,
-            Key: Path.join(cos.remotePath, path)
+            Key: Path.join(cos.remotePath, path).split(Path.sep).join('/')
         }, function(err, data) {
             if (err) {
                 return reject(err);
