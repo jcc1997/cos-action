@@ -1,5 +1,5 @@
 const core = require('@actions/core');
-const github = require('@actions/github');
+// const github = require('@actions/github');
 const COS = require('cos-nodejs-sdk-v5');
 const fs = require('fs');
 const Path = require('path');

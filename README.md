@@ -1,5 +1,7 @@
 # cos-action
 
+> FIX: no node_modules and can upload in windows-latest
+
 Github Action to upload to Tencent Cloud COS
 
 ## Inputs

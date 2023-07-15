@@ -1,4 +1,4 @@
-name: 'New Tencent Cloud COS Action'
+name: '[Fixed] Tencent Cloud COS Action'
 description: 'Upload files to Tencent Cloud COS'
 branding:
   icon: 'upload-cloud'
@@ -29,5 +29,5 @@ inputs:
     description: 'Set to true for using accelerate domain to upload files. Default is false'
     required: false
 runs:
-  using: 'node12'
-  main: 'index.js'
+  using: 'node18'
+  main: 'dist/index.js'
